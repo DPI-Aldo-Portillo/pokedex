@@ -1,0 +1,16 @@
+<h1>Pokedex</h1>
+
+<%= @name %>
+
+<%= @weight %> lbs
+
+<img src="<%= @photo %>" alt="photo of <%= @name %>">
+
+<h2>Abilities</h2>
+<ol>
+  <% @moves.each do |move| %>
+  <li>
+    <%= move.dig("move", "name") %>
+  </li>
+  <% end %>
+</ol>
